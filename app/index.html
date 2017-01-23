@@ -1,0 +1,204 @@
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Mapa de Células - Igreja Batista Elim | Sua igreja sua família! </title>
+		<meta name="description" content="Mapa de células da Igreja Batista Elim">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+		<link href="css/vendor/bootstrap.min.css" rel="stylesheet">
+		<link href="css/flat-ui.css" rel="stylesheet">
+		<link href="styles/main.scss" rel="stylesheet">
+		<link rel="shortcut icon" href="ico/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="ico/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="57x57" href="ico/apple-touch-icon-57x57.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="ico/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="76x76" href="ico/apple-touch-icon-76x76.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="ico/apple-touch-icon-114x114.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="ico/apple-touch-icon-120x120.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="ico/apple-touch-icon-144x144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="ico/apple-touch-icon-152x152.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="ico/apple-touch-icon-180x180.png" />	
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+		<![endif]-->	
+	</head>
+	<body>
+		<div id="map"></div>
+
+		<div class="col-xs-12 divNav" >
+			<nav class="navbar navbar-inverse navbar-embossed" role="navigation" style="border-radius: 0; margin-bottom: 0">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+						<span class="sr-only">Toggle navigation</span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img src="img/logo.png" height="40px" style="margin-top: -8px" alt=""></img> 
+							<span class="navbar-brand-title">
+								Mapa de C&eacute;lulas
+								<span class="brand-name"> - Igreja Batista Elim</span>
+							</span>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-01">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#">Quero uma célula em minha casa</a>
+						</li>
+						<li>
+							<a href="#" onclick="abrirModalFiltro()">Filtrar
+								<span class="navbar-unread"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav><!-- /navbar -->
+		</div>
+		<div class="modal fade" id="modalFiltro" tabindex="-1" role="dialog" aria-labelledby="modalFiltroLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="modalFiltroLabel">Filtrar</h4>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="form-group">
+								<select class="form-control select select-primary" data-toggle="select">
+									<option value="">Todos</option>
+									<option value="Ouro Preto">Ouro Preto</option>
+									<option value="Castelo">Castelo</option>
+									<option value="Paqueta">Paquet&aacute;</option>
+									<option value="Betania">Bet&acirc;nia</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<h6 class="demo-panel-title">Rede</h6>
+							<div class="col-xs-4">
+								<label class="checkbox" for="chkKids">
+									<input type="checkbox" data-toggle="checkbox" value="" id="chkKids" class="chkRede">
+									Kids
+								</label>
+								<label class="checkbox" for="chkHomens">
+									<input type="checkbox" data-toggle="checkbox" value="" id="chkHomens" class="chkRede">
+									Homens
+								</label>
+							</div>
+							<div class="col-xs-4">					
+								<label class="checkbox" for="chkCriancas3">
+									<input type="checkbox" data-toggle="checkbox" value="" id="chkCriancas3" class="chkRede">
+									Mulheres
+								</label>				
+								<label class="checkbox" for="chkCriancas4">
+									<input type="checkbox" data-toggle="checkbox" value="" id="chkCriancas4" class="chkRede">
+									Adolescentes
+								</label>
+							</div>
+						</div>
+						<div class="row">
+							<h6 class="demo-panel-title">Dia da Semana</h6>
+							<div class="col-xs-4">
+								<label class="checkbox" for="chkSemana0">
+									<input type="checkbox" data-toggle="checkbox" value="" id="chkSemana0" class="chkSemana">
+									Domingo
+								</label>				  
+								<label class="checkbox" for="chkSemana1">
+									<input type="checkbox" data-toggle="checkbox" value="" id="chkSemana1" class="chkSemana">
+									Segunda
+								</label>
+								<label class="checkbox" for="chkSemana2">
+									<input type="checkbox" data-toggle="checkbox" value="" id="chkSemana2" class="chkSemana">
+									Terça
+								</label>
+							</div>
+							<div class="col-xs-4">
+								<label class="checkbox" for="chkSemana3">
+									<input type="checkbox" data-toggle="checkbox" value="" id="chkSemana3" class="chkSemana">
+									Quarta
+								</label>			
+								<label class="checkbox" for="chkSemana4">
+									<input type="checkbox" data-toggle="checkbox" value="" id="chkSemana4" class="chkSemana">
+									Quinta</label>	
+								<label class="checkbox" for="chkSemana5">
+									<input type="checkbox" data-toggle="checkbox" value="" id="chkSemana5" class="chkSemana">
+									Sexta
+								</label>	
+							</div>
+							<div class="col-xs-4">
+								<label class="checkbox" for="chkSemana6">
+									<input type="checkbox" data-toggle="checkbox" value="" id="chkSemana6" class="chkSemana">
+									S&aacute;bado
+								</label>
+							</div>
+						</div>			
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-primary">Aplicar Filtros</button>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="modal fade" id="modalInfoCelula" tabindex="-1" role="dialog" aria-labelledby="modalCelulaLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="modalCelulaLabel">Célula</h4>
+					</div>
+					<div class="modal-body" id="celula">
+						<div class="row cellAddress">
+							<span><b>Endereço: </b> { celula._id.logradouro }</span>
+							<span><b>Número: </b> { celula._id.numero }</span>
+							<span><b>Complemento: </b> { celula._id.complemento }</span>
+							<span><b>Bairro: </b> { celula._id.bairro }</span>
+						</div>
+						<div class="row cellRow" rv-each-item="celula.celulas">
+							<div class="tile cellItem expanded">
+								<button type="button" class="close" aria-label="Expandir" aria-expanded="false" rv-on-click="item.collapse" rv-aria-controls="item.divMoreInfo" data-toggle="collapse" rv-data-target="item.divMoreInfo">
+									<span rv-id="item.spanMoreInfo">&plus;</span>
+								</button>								
+							{ item.rede } - { item.nomeDiaSemana } - { item.horario }
+							</div>
+							<div class="tile cellItemComplemento collapse" rv-id="item.divMoreInfo">							
+							<b>Líder: </b>{ item.nomeLider } - { item.telefone }
+							</div>							
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>				
+		<script src="js/vendor/jquery.min.js"></script>	
+		<script src="js/vendor/jquery.ui.widget.js"></script>
+		<span role="status" aria-live="polite" class="select2-hidden-accessible"></span>	
+		<script src="js/flat-ui.js"></script>
+		<script src="bower_components/rivets/dist/rivets.bundled.min.js"></script>
+		<script src="js/gmaps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbaQG1ALw0jqzDjqLGIxyszmgCUaBvL58&callback=initMap"
+        async defer>
+    </script>		
+		<script>
+			const abrirModalFiltro = () => {
+				$('#modalFiltro').modal();
+				$('.navbar-toggle').click();
+			};
+
+			$(function () {
+				$('[data-toggle="checkbox"]').radiocheck();
+
+				if ($('[data-toggle="select"]').length) {
+				$('[data-toggle="select"]').select2();
+				}
+			});
+		</script>
+	</body>
+</html>

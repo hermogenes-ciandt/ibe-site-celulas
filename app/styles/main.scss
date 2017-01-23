@@ -1,0 +1,72 @@
+.navbar-brand {
+  font-size: 18px;
+  padding-left: 5px;
+  padding-right: 5px
+}
+
+@media(max-width: 450px){
+  .brand-name {
+    display: none
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 100%;
+}
+
+.modal-dialog{
+  margin-top: 60px
+}
+
+.divNav {
+  z-index: 9999;
+  top:0;
+  position:absolute;
+  margin:0;
+  padding: 0;
+  border-radius: 0  
+}
+
+.row {
+  margin: auto
+}
+
+.cellAddress {
+  margin-bottom: 10px;
+}
+
+.cellAddress span {
+  display: block
+}
+
+.cellItem {
+  text-align: left;
+  margin-bottom: 0
+}
+
+.cellItem button {
+  font-size: 30px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0  
+}
+
+.cellItem.expanded {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0  
+}
+
+.cellItemComplemento {
+  text-align: left;
+  background-color: #d8d8d8;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0
+}
+
+.cellRow {
+  margin-bottom: 20px
+}
